@@ -13,7 +13,7 @@ const AboutUs = () => (
         </div>
 
         {/* Icon dengan border */}
-        <div className="relative rounded-3xl border-4 border-purple w-full max-w-[618px] h-[200px] md:h-[250px] flex items-center justify-center">
+        <div className="relative rounded-3xl border-4 border-orange w-full max-w-[618px] h-[200px] md:h-[250px] flex items-center justify-center">
           <Image
             src={arrow}
             alt="logo"

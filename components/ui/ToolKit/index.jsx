@@ -1,82 +1,98 @@
-import SectionWrapper from "../../SectionWrapper"
-import Image from "next/image"
-import wordpress from "../../../public/icons/wordpress.svg"
-import nextjs from "../../../public/icons/nextjs.svg"
-import tailwind from "../../../public/icons/tailwind.svg"
-import nodejs from "../../../public/icons/nodejs.svg"
-import vercel from "../../../public/icons/vercel.svg"
-import figma from "../../../public/icons/figma.svg"
+import SectionWrapper from "../../SectionWrapper";
+import Slider from "react-slick";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const ToolKit = () => {
+  const [isClient, setIsClient] = useState(false);
 
-    const features = [
-        {
-            icon: wordpress,
-            title: "Wordpress",
-            desc: "WordPress is an open-source content management system (CMS)."
-        },
-        {
-            icon: nextjs,
-            title: "Next.js",
-            desc: "Next.js is a React framework that gives you building blocks to create web apps."
-        },
-        {
-            icon: tailwind,
-            title: "Tailwind CSS",
-            desc: "Tailwind CSS is basically a utility-first CSS framework for rapidly building UIs."
-        },
-        {
-            icon: nodejs,
-            title: "Node.js",
-            desc: "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment."
-        },
-        {
-            icon: vercel,
-            title: "Vercel",
-            desc: "Vercel is a cloud platform that enables developers to host web apps."
-        },
-        {
-            icon: figma,
-            title: "Figma",
-            desc: "Figma is a web-based graphics editing and user interface design app."
-        },
-    ]
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
-    return (
-        <SectionWrapper>
-            <div id="toolkit" className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-                <div className="max-w-2xl mx-auto space-y-3 sm:text-center">
-                    <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                        Work with the best toolkit
-                    </h2>
-                    <p>
-                        These are a few of our favourite things
-                    </p>
+  const settings = {
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    speed: 4000,
+    autoplaySpeed: 1500,
+    className: "w-full mx-auto cursor-pointer",
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1.3 },
+      },
+      {
+        breakpoint: 480,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
+
+  if (!isClient) return null;
+
+  const images = [
+    "/images/1.jpg",
+    "/images/2.jpg",
+    "/images/3.jpg",
+    "/images/4.jpg",
+    "/images/5.jpg",
+    "/images/6.jpg",
+  ];
+
+  return (
+    <SectionWrapper>
+      <div id="toolkit" className="max-w-screen-xl mx-auto  text-gray-600">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row items-start md:items-center px-4 md:px-8 justify-between gap-96">
+          <h1 className="text-gray-800 text-3xl font-extrabold sm:text-4xl">
+            Template
+          </h1>
+          <div className="flex-1">
+            <p className="text-base md:text-lg text-black my-2 md:my-4">
+              Desain profesional untuk berbagai kebutuhan presentasi, baik bisnis, edukasi, maupun acara formal, dan lain-lain
+            </p>
+            <div className="mt-2 h-4 border-t-4 border-image-gradient rounded-full"></div>
+            <p className="text-base md:text-lg text-black my-2 md:my-4">
+              Mudah disesuaikan dan tersedia dalam berbagai gaya, mulai dari minimalis hingga kreatif.
+            </p>
+          </div>
+        </div>
+
+        {/* Slider */}
+        <div className="relative mt-10">
+          <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-tr from-orange to-yellow z-0"></div>
+          <div className="relative z-10">
+            <Slider {...settings}>
+              {images.map((src, index) => (
+                <div
+                  key={index}
+                  className="p-2 transition-transform duration-300 ease-in-out hover:scale-105"
+                >
+                  <Image
+                    priority
+                    src={src}
+                    alt={`slide-${index}`}
+                    width={1000}
+                    height={1000}
+                    className="shadow-md w-full h-auto rounded-lg"
+                  />
                 </div>
-                <div className="mt-12">
-                    <ul className="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
-                        {
-                            features.map((item, idx) => (
-                                <li key={idx} className="flex gap-x-4">
-                                    <div className="flex-none w-12 h-12 gradient-border rounded-full flex items-center justify-center">
-                                        <Image src={item.icon} alt={item.title} />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-lg text-gray-800 font-semibold">
-                                            {item.title}
-                                        </h4>
-                                        <p className="mt-3">
-                                            {item.desc}
-                                        </p>
-                                    </div>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-            </div>
-        </SectionWrapper>
-    )
-}
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </div>
+    </SectionWrapper>
+  );
+};
 
-export default ToolKit
+export default ToolKit;

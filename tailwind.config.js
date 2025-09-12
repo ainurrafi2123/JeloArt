@@ -12,8 +12,11 @@ module.exports = {
       colors: {
         brand: {
         },
-        purple: '#CB3CFF',
-        darkpurple: '#641C7E',
+        yellow: '#ffcf07',
+        orange: '#fe5a1d',
+      },
+      borderImage: {
+        'gradient-yellow-orange': 'linear-gradient(to right, #ffcf07 33%, #fe5a1d 33%) 1',
       },
     },
   },
@@ -21,5 +24,12 @@ module.exports = {
     require("@tailwindcss/forms")({
       strategy: "class", // only generate classes
     }),
+    function ({ addUtilities }) {
+      addUtilities({
+        '.border-image-gradient': {
+          'border-image': 'linear-gradient(to top right, #ffcf07, #fe5a1d) 1',
+        },
+      });
+    },
   ],
 };

@@ -2,7 +2,6 @@ import Head from "next/head";
 import GradientWrapper from "../components/GradientWrapper";
 import CTA from "../components/ui/CTA";
 import VisiMisi from "../components/ui/VisiMisi";
-import FooterCTA from "../components/ui/FooterCTA";
 import Hero from "../components/ui/Hero";
 import AboutUs from "../components/ui/Aboutus";
 import Slider from "../components/ui/Slider";
@@ -26,7 +25,7 @@ export default function Home() {
       <GradientWrapper>
         <Testimonials />
       </GradientWrapper>
-      <FooterCTA />
+      {/* <FooterCTA /> */}
     </>
   );
 }

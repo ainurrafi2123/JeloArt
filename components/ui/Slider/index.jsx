@@ -72,7 +72,7 @@ const SliderOne = () => {
   return (
   <div className="relative pb-5 pt-20">
     {/* background gradient */}
-    <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-tr from-darkpurple to-purple z-0"></div>
+    <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-tr from-orange to-yellow z-0"></div>
 
     <div className="relative z-10 space-y-5">
       <Slider {...settings}>
@@ -87,7 +87,7 @@ const SliderOne = () => {
               alt="logo"
               width={1000}
               height={1000}
-              className="shadow-md w-full h-auto rounded-md"
+              className="shadow-md w-full h-auto "
             />
           </div>
         ))}
@@ -105,7 +105,7 @@ const SliderOne = () => {
               alt="logo"
               width={1000}
               height={1000}
-              className="shadow-md w-full h-auto rounded-md"
+              className="shadow-md w-full h-auto "
             />
           </div>
         ))}

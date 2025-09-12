@@ -13,7 +13,6 @@ const Navbar = () => {
         { title: "Tentang Kami", path: "#features" },
         { title: "Produk", path: "#toolkit" },
         { title: "Visi&Misi", path: "#testimonials" },
-        { title: "Kontak", path: "#testimonials" },
     ]
 
     useEffect(() => {
@@ -72,17 +71,25 @@ const Navbar = () => {
                             {
                                 navigation.map((item, idx) => {
                                     return (
-                                        <li key={idx} className="duration-150 hover:text-gray-900">
-                                            <Link
-                                                href={item.path}
-                                                className="block"
-                                            >
-                                                {item.title}
-                                            </Link>
-                                        </li>
+                                            <li key={idx} className="duration-150 hover:text-gray-900">
+                                                <Link
+                                                    href={item.path}
+                                                    className="block"
+                                                >
+                                                    {item.title}
+                                                </Link>
+                                                
+                                            </li>
                                     )
                                 })
                             }
+                            <li>
+                                <NavLink
+                                    href="/contact"
+                                    className="inline-block font-medium text-sm text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900">
+                                    Kontak
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
                 </div>

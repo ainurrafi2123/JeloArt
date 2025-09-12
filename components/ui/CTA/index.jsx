@@ -1,34 +1,32 @@
-import SectionWrapper from "../../SectionWrapper"
-import NavLink from "../NavLink"
-import ctaImage from "../../../public/cta-image.jpg"
-import Image from "next/image"
+import rocket from "../../../public/icons/rocket.png";
+import Image from "next/image";
 
-const CTA = () => {
-    return (
-        <SectionWrapper id="cta" className="pb-0">
-            <div className="custom-screen">
-                <div className="items-center gap-x-12 lg:flex">
-                    <div className="flex-1 sm:hidden lg:block">
-                        <Image src={ctaImage} className="rounded-lg md:max-w-lg" alt="Create Successful Business Models with Our IT Solutions" />
-                    </div>
-                    <div className="max-w-xl mt-6 md:mt-0 lg:max-w-2xl">
-                        <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                            Create Successful Business Models with Our IT Solutions
-                        </h2>
-                        <p className="mt-3 text-gray-600">
-                            Blinder, a software development company, helps to digitize businesses by focusing on client’s business challenges, needs. We value close transparent cooperation and encourage our clients to participate actively in the project development life cycle.
-                        </p>
-                        <NavLink
-                            href="/get-started"
-                            className="inline-block mt-4 font-medium text-sm text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800"
-                        >
-                            Get started
-                        </NavLink>
-                    </div>
-                </div>
-            </div>
-        </SectionWrapper>
-    )
-}
+const AboutUs = () => (
+  <div className="custom-screen bg-black text-white w-full min-h-[754px] p-5 flex justify-center items-center">
+    <div className="w-full">
+      {/* Judul + Icon */}
+      <div className="flex flex-col md:flex-row justify-between items-center text-xl font-bold gap-8 md:gap-0 pb-10">
+        {/* Judul */}
+        <div className="text-3xl md:text-6xl text-center md:text-left">
+          <h1>Kami</h1>
+          <h1>Menyediakan</h1>
+        </div>
 
-export default CTA
+        {/* Icon dengan border */}
+        <div className="relative rounded-3xl border-4 border-orange w-full max-w-[618px] h-[200px] md:h-[250px] flex items-center justify-center">
+          <Image
+            src={rocket}
+            alt="rocket"
+            className="w-1/2 md:w-1/3 h-auto"
+          />
+        </div>
+      </div>
+
+      {/* Paragraf */}
+      <div className="pt-6 md:pt-10">
+      </div>
+    </div>
+  </div>
+);
+
+export default AboutUs;
