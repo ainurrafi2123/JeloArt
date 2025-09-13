@@ -122,7 +122,7 @@ const Template = () => {
       </div>
 
       {/* Slider full width */}
-      <div className="relative mt-10 w-screen overflow-hidden">
+      <div className="relative mt-10 w-full overflow-hidden">
         {/* Background gradient */}
         <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-tr from-orange to-yellow z-0"></div>
         <div className="relative z-10 w-full">

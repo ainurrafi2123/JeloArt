@@ -28,7 +28,7 @@ const VisiMisi = () => {
                     </div>
                 </div>
 
-                <div className="bg-black w-full md:w-[500px] flex flex-col gap-6 p-6 sm:p-10 text-whiteZZ">
+                <div className="bg-black w-full md:w-[500px] flex flex-col gap-6 p-6 sm:p-10 text-white">
                     <div>
                         <h1 className="text-lg sm:text-xl font-semibold pb-3">Kualitas Template</h1>
                         <p className="text-sm sm:text-base">
