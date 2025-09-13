@@ -1,13 +1,51 @@
 import Head from "next/head";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
+import { useState } from "react";
 
 export default function GetStarted() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    cv: "",
+    message: "",
+  });
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "b239380f-af86-4ce8-bc94-7ceaa6223402",
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        cv: formData.cv,
+        message: formData.message,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Form berhasil dikirim!");
+      setFormData({ name: "", email: "", phone: "", cv: "", message: "" });
+    } else {
+      alert("Terjadi kesalahan, silakan coba lagi.");
+    }
+  }
+
   return (
     <>
       <Head>
         <title>Contact us - Jelo Art</title>
-      </Head> 
+      </Head>
 
       <div className="pt-28 pb-12 flex flex-col items-center">
         <div className="custom-screen text-gray-600 w-full px-5">
@@ -25,7 +63,7 @@ export default function GetStarted() {
           {/* Form */}
           <div className="max-w-lg w-full mx-auto">
             <form 
-              onSubmit={(e) => e.preventDefault()} 
+              onSubmit={handleSubmit} 
               className="space-y-5 font-medium text-left"
             >
               {/* Nama & Email */}
@@ -36,6 +74,8 @@ export default function GetStarted() {
                     aria-label="Nama Lengkap"
                     type="text"
                     required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="mt-2 w-full focus:border-indigo-600"
                   />
                 </div>
@@ -45,6 +85,8 @@ export default function GetStarted() {
                     aria-label="Email"
                     type="email"
                     required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="mt-2 w-full focus:border-indigo-600"
                   />
                 </div>
@@ -58,15 +100,19 @@ export default function GetStarted() {
                     aria-label="No Telp"
                     type="tel"
                     required
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="mt-2 w-full focus:border-indigo-600"
                   />
                 </div>
                 <div>
-                  <label>Upload CV</label>
+                  <label>Link CV & Portfolio</label>
                   <Input
-                    aria-label="Upload CV"
-                    type="file"
+                    aria-label="Link Cv"
+                    type="url"
                     required
+                    value={formData.cv}
+                    onChange={(e) => setFormData({ ...formData, cv: e.target.value })}
                     className="mt-2 w-full focus:border-indigo-600"
                   />
                 </div>
@@ -78,6 +124,8 @@ export default function GetStarted() {
                 <textarea
                   aria-label="Pesan"
                   required
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 ></textarea>
               </div>
