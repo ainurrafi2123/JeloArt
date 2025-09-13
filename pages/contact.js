@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
-import { useState } from "react";
+import { useState} from "react";
+import TeamKami from "../components/ui/Teamkami";
 
 export default function GetStarted() {
   const [formData, setFormData] = useState({
@@ -140,6 +141,7 @@ export default function GetStarted() {
           </div>
         </div>
       </div>
+    <TeamKami />
     </>
   );
 }
