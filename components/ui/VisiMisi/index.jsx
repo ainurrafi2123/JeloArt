@@ -10,8 +10,12 @@ const VisiMisi = () => {
                     <h1 className="text-6xl font-bold pb-8">Visi Kami</h1>
                     <p className="text-lg">Menjadi mitra utama pengguna global dalam<br/>menciptakan karya visual yang efektif dan<br/>menginspirasi melalui platform Canva.</p>
                 </div>
-                <div className="w-[550px] h-[325px] bg-purple">
-
+                <div>
+                    <Image
+                    src={Vector}
+                    alt="Vector"
+                    height={350}
+                    />
                 </div>
             </div>
             {/* Misi Kami */}

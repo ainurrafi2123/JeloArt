@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const ToolKit = () => {
+const Template = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -50,22 +50,27 @@ const ToolKit = () => {
 
   return (
     <SectionWrapper>
-      <div id="toolkit" className="max-w-screen-xl mx-auto  text-gray-600">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row items-start md:items-center px-4 md:px-8 justify-between gap-96">
-          <h1 className="text-gray-800 text-3xl font-extrabold sm:text-4xl">
+      <div id="Template" className="max-w-screen-xl mx-auto text-gray-600">
+        {/* Header Section */}
+        <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Judul Besar */}
+          <h1 className="text-gray-800 text-6xl sm:text-7xl md:text-8xl font-bold leading-tight text-center md:text-left">
             Template
           </h1>
-          <div className="flex-1">
-            <p className="text-base md:text-lg text-black my-2 md:my-4">
-              Desain profesional untuk berbagai kebutuhan presentasi, baik bisnis, edukasi, maupun acara formal, dan lain-lain
+
+          {/* Box Penjelasan */}
+          <div className="flex flex-col items-center md:items-start w-full max-w-lg">
+            <p className="text-base md:text-lg text-black my-4 text-justify">
+              Desain profesional untuk berbagai kebutuhan presentasi, baik bisnis, edukasi,
+              maupun acara formal, dan lain-lain.
             </p>
-            <div className="mt-2 h-4 border-t-4 border-image-gradient rounded-full"></div>
-            <p className="text-base md:text-lg text-black my-2 md:my-4">
-              Mudah disesuaikan dan tersedia dalam berbagai gaya, mulai dari minimalis hingga kreatif.
+            <div className="mt-2 w-full h-4 border-t-4 border-image-gradient rounded-full"></div>
+            <p className="text-base md:text-lg text-black my-4 text-justify">
+              Mudah disesuaikan dan tersedia dalam berbagai gaya, mulai dari minimalis
+              hingga kreatif.
             </p>
           </div>
-        </div>
+        </section>
 
         {/* Slider */}
         <div className="relative mt-10">
@@ -95,4 +100,4 @@ const ToolKit = () => {
   );
 };
 
-export default ToolKit;
+export default Template;

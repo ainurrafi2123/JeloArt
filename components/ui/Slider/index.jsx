@@ -74,7 +74,7 @@ const SliderOne = () => {
     {/* background gradient */}
     <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-tr from-orange to-yellow z-0"></div>
 
-    <div className="relative z-10 space-y-5">
+    <div className="relative z-10 space-y-6 ">
       <Slider {...settings}>
         {images.map((src, index) => (
           <div
