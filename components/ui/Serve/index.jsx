@@ -1,4 +1,4 @@
-import rocket from "../../../public/icons/rocket.png";
+import rocket from "../../../public/icons/roket.gif";
 import and from "../../../public/icons/and.svg";
 import Image from "next/image";
 
@@ -16,11 +16,12 @@ const Serve = () => (
           </div>
 
           {/* Icon dengan border (Rocket) */}
-          <div className="relative rounded-3xl border-4 border-orange w-full max-w-[408px] h-[210px] md:h-[220px] flex items-center justify-center bg-black">
+          <div className="relative rounded-3xl border-4 border-orange w-full max-w-[408px] h-[210px] md:h-[220px] flex items-center justify-center bg-black overflow-hidden">
             <Image
               src={rocket}
               alt="rocket"
-              className="w-2/3 md:w-3/3 h-auto object-contain"
+              fill
+              className="object-cover"
               priority
             />
           </div>
