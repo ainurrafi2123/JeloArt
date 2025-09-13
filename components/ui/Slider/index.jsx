@@ -21,7 +21,7 @@ const SliderOne = () => {
     speed: 4000,
     autoplaySpeed: 1000,
     className: "w-full mx-auto cursor-pointer",
-    slidesToShow: 3,
+    slidesToShow: 3, // default desktop
     responsive: [
       {
         breakpoint: 1024, // tablet
@@ -30,15 +30,15 @@ const SliderOne = () => {
         },
       },
       {
-        breakpoint: 768, // hp besar
+        breakpoint: 768, // hp
         settings: {
-          slidesToShow: 1.3,
+          slidesToShow: 1, // tampil 1 penuh
         },
       },
       {
         breakpoint: 480, // hp kecil
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1, // tetap 1 penuh
         },
       },
     ],
@@ -70,48 +70,48 @@ const SliderOne = () => {
   ];
 
   return (
-  <div className="relative pb-5 pt-20">
-    {/* background gradient */}
-    <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-tr from-orange to-yellow z-0"></div>
+    <div className="relative pb-5 pt-20">
+      {/* background gradient */}
+      <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-tr from-orange to-yellow z-0"></div>
 
-    <div className="relative z-10 space-y-6 ">
-      <Slider {...settings}>
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className="p-2 transition-transform duration-300 ease-in-out hover:scale-105"
-          >
-            <Image
-              priority
-              src={src}
-              alt="logo"
-              width={1000}
-              height={1000}
-              className="shadow-md w-full h-auto "
-            />
-          </div>
-        ))}
-      </Slider>
+      <div className="relative z-10 space-y-6">
+        <Slider {...settings}>
+          {images.map((src, index) => (
+            <div
+              key={index}
+              className="p-2 transition-transform duration-300 ease-in-out hover:scale-105"
+            >
+              <Image
+                priority
+                src={src}
+                alt={`foto-${index + 1}`}
+                width={1200}
+                height={675}
+                className="shadow-md w-full h-auto rounded-lg"
+              />
+            </div>
+          ))}
+        </Slider>
 
-      <Slider {...setting2}>
-        {[...images].reverse().map((src, index) => (
-          <div
-            key={index}
-            className="p-2 transition-transform duration-300 ease-in-out hover:scale-105"
-          >
-            <Image
-              priority
-              src={src}
-              alt="logo"
-              width={1000}
-              height={1000}
-              className="shadow-md w-full h-auto "
-            />
-          </div>
-        ))}
-      </Slider>
+        <Slider {...setting2}>
+          {[...images].reverse().map((src, index) => (
+            <div
+              key={index}
+              className="p-2 transition-transform duration-300 ease-in-out hover:scale-105"
+            >
+              <Image
+                priority
+                src={src}
+                alt={`foto-reverse-${index + 1}`}
+                width={1200}
+                height={675}
+                className="shadow-md w-full h-auto rounded-lg"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
-  </div>
   );
 };
 
