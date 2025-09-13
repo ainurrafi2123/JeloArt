@@ -86,7 +86,7 @@ const Navbar = () => {
                             <li>
                                 <NavLink
                                     href="/contact"
-                                    className="inline-block font-medium text-sm text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900">
+                                    className="inline-block font-medium text-sm text-white bg-black hover:bg-gray-600">
                                     Kontak
                                 </NavLink>
                             </li>
