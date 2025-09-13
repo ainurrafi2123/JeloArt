@@ -64,7 +64,7 @@ const Template = () => {
               Desain profesional untuk berbagai kebutuhan presentasi, baik bisnis, edukasi,
               maupun acara formal, dan lain-lain.
             </p>
-            <div className="mt-2 w-full h-4 border-t-4 border-image-gradient rounded-full"></div>
+            <div className="mt-2 w-full h-4 border-t-2 border-black "></div>
             <p className="text-base md:text-lg text-black my-4 text-justify">
               Mudah disesuaikan dan tersedia dalam berbagai gaya, mulai dari minimalis
               hingga kreatif.

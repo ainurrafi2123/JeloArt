@@ -40,7 +40,7 @@ const Footer = () => (
         </div>
 
         <div className="flex flex-col gap-10 border-4 border-orange px-6 sm:px-10 md:px-14 py-8 text-lg my-20">
-            <div className="flex flex-col sm:flex-row justify-between w-full gap-4 sm:gap-0">
+            <div className="flex flex-col font-bold sm:flex-row justify-between w-full gap-4 sm:gap-0">
                 <Link 
                 href="https://www.canva.com/p/saiside" 
                 className="hover:underline break-words"
@@ -49,7 +49,7 @@ const Footer = () => (
                 </Link>
                 <p>jeloart9@gmail.com</p>
             </div>
-            <div className="flex flex-col sm:flex-row justify-between w-full gap-4 sm:gap-0">
+            <div className="flex flex-col sm:flex-row justify-between w-full gap-4 font-bold sm:gap-0">
                 <p>Jl. Danau Rawa Pening II H5G11</p>
                 <p>+62 851 8326 2669</p>
             </div>

@@ -17,9 +17,15 @@ const ShuffleHero = () => {
           <p className="text-base md:text-lg text-slate-300 my-2 md:my-4 text-justify">
             Aset ilustrasi kami telah digunakan oleh lebih dari 10.000 pengguna Canva di berbagai belahan dunia. 
           </p>
-          <button className="bg-orange text-white font-medium py-2 px-4 my-5 rounded transition-all hover:bg-indigo-600 active:scale-95">
-            Kunjungi
-          </button>
+          <a
+            href="https://www.canva.com/p/saiside/?utm_medium=referral&utm_source=creator_share&utm_campaign=creator_share"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="bg-orange text-white font-medium py-2 px-4 my-5 rounded transition-all hover:bg- active:scale-95">
+              Kunjungi
+            </button>
+          </a>
         </div>
         <div className="w-full">
           <ShuffleGrid />
@@ -47,7 +53,7 @@ const shuffle = (array) => {
 };
 
 // bikin semua data dari 1 sampai 112
-const allIcons = Array.from({ length: 112 }, (_, i) => ({
+const allIcons = Array.from({ length: 128 }, (_, i) => ({
   id: i + 1,
   src: `/icons/${i + 1}.svg`,
 }));

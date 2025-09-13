@@ -1,4 +1,5 @@
 import Vector from "../../../public/icons/Vector.svg";
+import Mining from "../../../public/icons/Mining.svg";
 import Image from "next/image";
 
 const VisiMisi = () => {
@@ -15,7 +16,7 @@ const VisiMisi = () => {
                     </p>
                 </div>
                 <div className="flex justify-center">
-                    <Image src={Vector} alt="Vector" height={250} className="w-40 sm:w-60 md:w-auto" />
+                    <Image src={Mining} alt="Vector" height={250} className="w-40 sm:w-60 md:w-auto" />
                 </div>
             </div>
 
@@ -39,7 +40,7 @@ const VisiMisi = () => {
                         desain terkini dan kebutuhan pasar.
                         </p>
                     </div>
-                    <hr className="border-gray-700" />
+                    <hr className="border-image-gradient border-t-4 " />
 
                     <div>
                         <h1 className="text-lg sm:text-xl font-semibold pb-3">Mudah Digunakan</h1>
@@ -51,7 +52,7 @@ const VisiMisi = () => {
                         dan profesional.
                         </p>
                     </div>
-                    <hr className="border-gray-700" />
+                    <hr className="border-image-gradient border-t-4 " />
 
                     <div>
                         <h1 className="text-lg sm:text-xl font-semibold pb-3">Fungsional</h1>
