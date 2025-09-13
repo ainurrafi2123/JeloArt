@@ -22,7 +22,7 @@ export default function GetStarted() {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        access_key: "b239380f-af86-4ce8-bc94-7ceaa6223402",
+        access_key: process.env.NEXT_PUBLIC_ACCESS_KEY,
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
