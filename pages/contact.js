@@ -49,13 +49,13 @@ export default function GetStarted() {
       </Head>
 
       <div className="pt-28 pb-12 flex flex-col items-center">
-        <div className="custom-screen text-gray-600 w-full px-5">
+        <div className="custom-screen text-gray w-full px-5">
           {/* Header */}
           <div className="space-y-5 max-w-4xl mx-auto mb-10 text-center">
             <h1 className="text-2xl sm:text-4xl font-extrabold text-gray-800">
               Jadilah Bagian Dari Perjalanan Kami!!
             </h1>
-            <p className="max-w-xl mx-auto text-gray-600">
+            <p className="max-w-xl mx-auto text-gray">
               Di sini kamu bisa nemuin hal-hal baru, ngasah diri, sambil tetap enjoy bareng tim seru. 
               Setiap langkahnya bakal jadi pengalaman berharga yang bikin kamu tumbuh dan penuh cerita seru.
             </p>
@@ -77,7 +77,7 @@ export default function GetStarted() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="mt-2 w-full focus:border-indigo-600"
+                    className="mt-2 w-full focus:border-orange"
                   />
                 </div>
                 <div>
@@ -88,7 +88,7 @@ export default function GetStarted() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="mt-2 w-full focus:border-indigo-600"
+                    className="mt-2 w-full focus:border-orange"
                   />
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function GetStarted() {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="mt-2 w-full focus:border-indigo-600"
+                    className="mt-2 w-full focus:border-orange"
                   />
                 </div>
                 <div>
@@ -114,7 +114,7 @@ export default function GetStarted() {
                     required
                     value={formData.cv}
                     onChange={(e) => setFormData({ ...formData, cv: e.target.value })}
-                    className="mt-2 w-full focus:border-indigo-600"
+                    className="mt-2 w-full focus:border-orange"
                   />
                 </div>
               </div>
@@ -127,13 +127,13 @@ export default function GetStarted() {
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                  className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-orange shadow-sm rounded-lg"
                 ></textarea>
               </div>
 
               {/* Submit */}
               <div className="pt-1">
-                <Button className="w-full text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 ring-offset-2 ring-indigo-600 focus:ring">
+                <Button className="w-full text-white bg-orange hover:bg-yellow active:bg-orange ring-offset-2 ring-orange focus:ring">
                   Submit
                 </Button>
               </div>
