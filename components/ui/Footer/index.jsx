@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "../../../public/logos/jeloArt.png";
+import Link from "next/link";
 
 
 const socialInfo = [
@@ -38,16 +39,25 @@ const Footer = () => (
             </div>
         </div>
 
-        {/* Footer bottom */}
-        <div className="mt-10 py-10 border-t border-gray-700 items-center justify-between sm:flex">
-        <p className="text-black text-center sm:text-left">© 2022 Jelo Art Studio. All rights reserved.</p>
-        <div className="flex items-center gap-x-6 text-black mt-6 sm:mt-0 justify-center sm:justify-start">
-            {socialInfo.map((item, idx) => (
-            <a key={idx} href={item.href} aria-label="social media" target="_blank" rel="noreferrer">
-                {item.icon}
-            </a>
-            ))}
+        <div className="flex flex-col gap-10 border-4 border-orange px-6 sm:px-10 md:px-14 py-8 text-lg my-20">
+            <div className="flex flex-col sm:flex-row justify-between w-full gap-4 sm:gap-0">
+                <Link 
+                href="https://www.canva.com/p/saiside" 
+                className="hover:underline break-words"
+                >
+                https://www.canva.com/p/saiside
+                </Link>
+                <p>jeloart9@gmail.com</p>
+            </div>
+            <div className="flex flex-col sm:flex-row justify-between w-full gap-4 sm:gap-0">
+                <p>Jl. Danau Rawa Pening II H5G11</p>
+                <p>+62 851 8326 2669</p>
+            </div>
         </div>
+
+        {/* Footer bottom */}
+        <div className="pb-10 border-gray-700 items-center justify-center sm:flex">
+            <p className="text-black text-center sm:text-left">COPYRIGHT © 2022 Jelo Art Studio.  ALL RIGHTS RESERVED.</p>
         </div>
     </div>
     </footer>
