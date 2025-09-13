@@ -2,6 +2,7 @@ import Head from "next/head";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
 import { useState } from "react";
+import { DragCards } from "../components/DragCards"; // Import the DragCards component
 
 export default function GetStarted() {
   const [formData, setFormData] = useState({
@@ -137,6 +138,16 @@ export default function GetStarted() {
                 </Button>
               </div>
             </form>
+          </div>
+
+          {/* Gallery Section with DragCards */}
+          <div className="mt-16 text-center">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-8">
+              Tim Kami
+            </h2>
+            <div className="relative">
+              <DragCards />
+            </div>
           </div>
         </div>
       </div>
