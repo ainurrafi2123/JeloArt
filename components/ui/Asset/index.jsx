@@ -4,23 +4,25 @@ import { useEffect, useRef, useState } from "react";
 const ShuffleHero = () => {
   return (
     <div className="min-h-screen bg-black">
-      <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
-        <ShuffleGrid />
-        <div>
-          <h3 className="text-4xl md:text-6xl font-semibold text-white">
+      <section className="w-full px-8 py-12 flex flex-col items-center gap-8 max-w-6xl mx-auto">
+        <div className="text-center max-w-3xl">
+          <h3 className="text-4xl md:text-6xl font-semibold text-white text-center">
             Aset Ilustrasi
           </h3>
-          <p className="text-base md:text-lg text-slate-300 my-4 md:my-6">
+          <p className="text-base md:text-lg text-slate-300 my-4 md:my-6 text-justify">
             Koleksi ilustrasi berkualitas tinggi, mulai dari vektor, ikon, hingga elemen grafis unik yang mendukung 
             kebutuhan desain pengguna.
           </p>
-          <div className="mt-2 px-10 h-4 border-t-4 border-image-gradient rounded-full"></div>
-          <p className="text-base md:text-lg text-slate-300 my-2 md:my-4">
+          <div className="mt-2 px-10 h-4 border-t-4 border-image-gradient rounded-full mx-auto"></div>
+          <p className="text-base md:text-lg text-slate-300 my-2 md:my-4 text-justify">
             Aset ilustrasi kami telah digunakan oleh lebih dari 10.000 pengguna Canva di berbagai belahan dunia. 
           </p>
-          <button className="bg-orange text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
+          <button className="bg-orange text-white font-medium py-2 px-4 my-5 rounded transition-all hover:bg-indigo-600 active:scale-95">
             Kunjungi
           </button>
+        </div>
+        <div className="w-full">
+          <ShuffleGrid />
         </div>
       </section>
     </div>
@@ -44,72 +46,20 @@ const shuffle = (array) => {
   return array;
 };
 
-const squareData = [
-  {
-    id: 1,
-    src: "/icons/1.png",
-  },
-  {
-    id: 2,
-    src: "/icons/2.png",
-  },
-  {
-    id: 3,
-    src: "/icons/3.png",
-  },
-  {
-    id: 4,
-    src: "/icons/4.png",
-  },
-  {
-    id: 5,
-    src: "/icons/5.png",
-  },
-  {
-    id: 6,
-    src: "/icons/6.png",
-  },
-  {
-    id: 7,
-    src: "/icons/7.png",
-  },
-  {
-    id: 8,
-    src: "/icons/8.png",
-  },
-  {
-    id: 9,
-    src: "/icons/9.png",
-  },
-  {
-    id: 10,
-    src: "/icons/10.png",
-  },
-  {
-    id: 11,
-    src: "/icons/11.png",
-  },
-  {
-    id: 12,
-    src: "/icons/12.png",
-  },
-  {
-    id: 13,
-    src: "/icons/13.png",
-  },
-  {
-    id: 14,
-    src: "/icons/14.png",
-  },
-  {
-    id: 15,
-    src: "/icons/15.png",
-  },
-  {
-    id: 16,
-    src: "/icons/16.png",
-  },
-];
+// bikin semua data dari 1 sampai 112
+const allIcons = Array.from({ length: 112 }, (_, i) => ({
+  id: i + 1,
+  src: `/icons/${i + 1}.svg`,
+}));
+
+// ambil acak 32 saja
+const getRandomIcons = (count) => {
+  const shuffled = [...allIcons].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+};
+
+// hasil yang dipakai
+const squareData = getRandomIcons(32);
 
 const generateSquares = () => {
   return shuffle(squareData).map((sq) => (
@@ -146,10 +96,16 @@ const ShuffleGrid = () => {
 
   return (
     <div 
-      className="grid grid-cols-4 grid-rows-4 gap-2"
+      className="
+        grid gap-2
+        grid-cols-4 grid-rows-8     /* default HP */
+        sm:grid-cols-6 sm:grid-rows-6 /* tablet kecil */
+        md:grid-cols-8 md:grid-rows-4 /* tablet besar / laptop */
+        lg:grid-cols-8 lg:grid-rows-4 /* monitor */
+      "
       style={{
-        height: '450px', // Fixed height to prevent CLS
-        minHeight: '450px',
+        height: "450px", // Fixed height to prevent CLS
+        minHeight: "450px",
       }}
     >
       {squares}
