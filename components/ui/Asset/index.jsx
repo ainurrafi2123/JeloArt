@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 const ShuffleHero = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black" id="asset">
       <section className="w-full px-8 py-12 flex flex-col items-center gap-8 max-w-6xl mx-auto">
         <div className="text-center max-w-3xl">
           <h3 className="text-4xl md:text-6xl font-semibold text-white text-center">
