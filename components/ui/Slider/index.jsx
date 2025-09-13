@@ -87,7 +87,7 @@ const SliderOne = () => {
                 alt={`foto-${index + 1}`}
                 width={1200}
                 height={675}
-                className="shadow-md w-full h-auto rounded-lg"
+                className="shadow-md w-full h-auto"
               />
             </div>
           ))}
@@ -105,7 +105,7 @@ const SliderOne = () => {
                 alt={`foto-reverse-${index + 1}`}
                 width={1200}
                 height={675}
-                className="shadow-md w-full h-auto rounded-lg"
+                className="shadow-md w-full h-auto"
               />
             </div>
           ))}
