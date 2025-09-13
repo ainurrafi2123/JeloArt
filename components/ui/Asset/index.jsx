@@ -9,12 +9,12 @@ const ShuffleHero = () => {
           <h3 className="text-4xl md:text-6xl font-semibold text-white text-center">
             Aset Ilustrasi
           </h3>
-          <p className="text-base md:text-lg text-slate-300 my-4 md:my-6 text-justify">
+          <p className="text-base md:text-lg text-slate-300 my-4 md:my-6 text-center">
             Koleksi ilustrasi berkualitas tinggi, mulai dari vektor, ikon, hingga elemen grafis unik yang mendukung 
             kebutuhan desain pengguna.
           </p>
           <div className="mt-2 px-10 h-4 border-t-4 border-image-gradient rounded-full mx-auto"></div>
-          <p className="text-base md:text-lg text-slate-300 my-2 md:my-4 text-justify">
+          <p className="text-base md:text-lg text-slate-300 my-2 md:my-4 text-center">
             Aset ilustrasi kami telah digunakan oleh lebih dari 10.000 pengguna Canva di berbagai belahan dunia. 
           </p>
           <a
