@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const VisiMisi = () => {
     return (
-        <div className="h-auto w-full">
+        <div className="h-auto w-full" id="visi-misi">
         {/* Visi Kami */}
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 px-6 lg:px-10 py-10">
                 <div className="text-center md:text-left">

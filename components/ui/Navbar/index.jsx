@@ -10,9 +10,10 @@ const Navbar = () => {
     const { events } = useRouter();
 
     const navigation = [
-        { title: "Tentang Kami", path: "#features" },
-        { title: "Produk", path: "#toolkit" },
-        { title: "Visi&Misi", path: "#testimonials" },
+        { title: "Tentang Kami", path: "#tentang-kami" },
+        { title: "Visi & Misi", path: "#visi-misi" },
+        { title: "Template", path: "#template" },
+        { title: "Asset", path: "#asset" },
     ]
 
     useEffect(() => {

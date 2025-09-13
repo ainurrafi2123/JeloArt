@@ -2,7 +2,7 @@ import arrow from "../../../public/icons/arrow.svg";
 import Image from "next/image";
 
 const AboutUs = () => (
-  <section className="bg-black text-white w-full">
+  <section className="bg-black text-white w-full" id="tentang-kami">
     <div className="custom-screen min-h-[754px] p-5 flex justify-center items-center">
       <div className="w-full">
         

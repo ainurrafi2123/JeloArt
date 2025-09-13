@@ -51,7 +51,7 @@ const Template = () => {
   return (
     <SectionWrapper>
       {/* Header Section */}
-      <div id="Template" className="max-w-screen-xl mx-auto text-gray-600">
+      <div id="template" className="max-w-screen-xl mx-auto text-gray-600">
         <section className="w-full px-6 md:px-8 pb-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Judul Besar */}
           <h1 className="text-gray-800 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight text-center md:text-left">
