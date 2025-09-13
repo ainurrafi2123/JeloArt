@@ -32,13 +32,17 @@ const TeamKami = () => {
       {
         breakpoint: 768, // hp besar
         settings: {
-          slidesToShow: 1.3,
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "0px",
         },
       },
       {
         breakpoint: 480, // hp kecil
         settings: {
           slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "0px",
         },
       },
     ],
@@ -56,53 +60,54 @@ const TeamKami = () => {
 
   return (
     <div>
-        <div className="m-20">
-            <h1 className="text-center text-6xl font-bold">Tim Kami</h1>
-        </div>
-        <div className="relative pb-5 pt-20">
+      <div className="m-20">
+        <h1 className="text-center text-6xl font-bold">Tim Kami</h1>
+      </div>
+
+      <div className="relative pb-5 pt-20">
         {/* background gradient */}
         <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-tr from-orange to-yellow z-0"></div>
 
         <div className="relative z-10 space-y-6">
-            <Slider {...settings}>
+          <Slider {...settings}>
             {images.map((src, index) => (
-                <div
+              <div
                 key={index}
                 className="p-2 transition-transform duration-300 ease-in-out hover:scale-105"
-                >
-                <div className="w-full aspect-[16/9] relative overflow-hidden shadow-md">
-                    <Image
+              >
+                <div className="w-full max-w-sm md:max-w-lg lg:max-w-4xl mx-auto aspect-[16/9] relative overflow-hidden shadow-md">
+                  <Image
                     priority
                     src={src}
                     alt={`kegiatan-${index + 1}`}
                     fill
                     className="object-cover"
-                    />
+                  />
                 </div>
-                </div>
+              </div>
             ))}
-            </Slider>
+          </Slider>
 
-            <Slider {...setting2}>
+          <Slider {...setting2}>
             {[...images].reverse().map((src, index) => (
-                <div
+              <div
                 key={index}
                 className="p-2 transition-transform duration-300 ease-in-out hover:scale-105"
-                >
-                <div className="w-full aspect-[16/9] relative overflow-hidden shadow-md">
-                    <Image
+              >
+                <div className="w-full max-w-sm md:max-w-lg lg:max-w-4xl mx-auto aspect-[16/9] relative overflow-hidden shadow-md">
+                  <Image
                     priority
                     src={src}
                     alt={`kegiatan-reverse-${index + 1}`}
                     fill
                     className="object-cover"
-                    />
+                  />
                 </div>
-                </div>
+              </div>
             ))}
-            </Slider>
+          </Slider>
         </div>
-        </div>
+      </div>
     </div>
   );
 };
