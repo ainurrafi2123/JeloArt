@@ -49,12 +49,60 @@ const Template = () => {
   ];
 
   return (
+    // <SectionWrapper>
+    //   <div id="Template" className="max-w-screen-xl mx-auto text-gray-600">
+    //     {/* Header Section */}
+    //     <section className="w-full px-6 md:px-8 py-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    //       {/* Judul Besar */}
+    //       <h1 className="text-gray-800 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight text-center md:text-left">
+    //         Template
+    //       </h1>
+
+    //       {/* Box Penjelasan */}
+    //       <div className="flex flex-col items-center md:items-start w-full max-w-lg">
+    //         <p className="text-base md:text-lg text-black my-4 text-justify">
+    //           Desain profesional untuk berbagai kebutuhan presentasi, baik bisnis, edukasi,
+    //           maupun acara formal, dan lain-lain.
+    //         </p>
+    //         <div className="mt-2 w-full h-4 border-t-4 border-image-gradient rounded-full"></div>
+    //         <p className="text-base md:text-lg text-black my-4 text-justify">
+    //           Mudah disesuaikan dan tersedia dalam berbagai gaya, mulai dari minimalis
+    //           hingga kreatif.
+    //         </p>
+    //       </div>
+    //     </section>
+
+    //     {/* Slider */}
+    //     <div className="relative mt-10 w-full">
+    //       <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-tr from-orange to-yellow z-0"></div>
+    //       <div className="relative z-10">
+    //         <Slider {...settings}>
+    //           {images.map((src, index) => (
+    //             <div
+    //               key={index}
+    //               className="p-2 transition-transform duration-300 ease-in-out hover:scale-105"
+    //             >
+    //               <Image
+    //                 priority
+    //                 src={src}
+    //                 alt={`slide-${index}`}
+    //                 width={1000}
+    //                 height={1000}
+    //                 className="w-full h-auto max-h-[600px] object-contain shadow-md"
+    //               />
+    //             </div>
+    //           ))}
+    //         </Slider>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </SectionWrapper>
     <SectionWrapper>
+      {/* Header Section */}
       <div id="Template" className="max-w-screen-xl mx-auto text-gray-600">
-        {/* Header Section */}
-        <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <section className="w-full px-6 md:px-8 py-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Judul Besar */}
-          <h1 className="text-gray-800 text-6xl sm:text-7xl md:text-8xl font-bold leading-tight text-center md:text-left">
+          <h1 className="text-gray-800 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight text-center md:text-left">
             Template
           </h1>
 
@@ -71,29 +119,30 @@ const Template = () => {
             </p>
           </div>
         </section>
+      </div>
 
-        {/* Slider */}
-        <div className="relative mt-10">
-          <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-tr from-orange to-yellow z-0"></div>
-          <div className="relative z-10">
-            <Slider {...settings}>
-              {images.map((src, index) => (
-                <div
-                  key={index}
-                  className="p-2 transition-transform duration-300 ease-in-out hover:scale-105"
-                >
-                  <Image
-                    priority
-                    src={src}
-                    alt={`slide-${index}`}
-                    width={1000}
-                    height={1000}
-                    className="shadow-md w-full h-auto rounded-lg"
-                  />
-                </div>
-              ))}
-            </Slider>
-          </div>
+      {/* Slider full width */}
+      <div className="relative mt-10 w-screen overflow-hidden">
+        {/* Background gradient */}
+        <div className="absolute top-0 left-0 w-full h-2/3 bg-gradient-to-tr from-orange to-yellow z-0"></div>
+        <div className="relative z-10 w-full">
+          <Slider {...settings}>
+            {images.map((src, index) => (
+              <div
+                key={index}
+                className="px-2 transition-transform duration-300 ease-in-out hover:scale-105"
+              >
+                <Image
+                  priority
+                  src={src}
+                  alt={`slide-${index}`}
+                  width={1920}
+                  height={1080}
+                  className="w-full h-auto max-h-[600px] object-contain rounded-lg shadow-md"
+                />
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </SectionWrapper>
