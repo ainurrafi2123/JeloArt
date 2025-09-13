@@ -90,7 +90,7 @@ const Template = () => {
                   alt={`slide-${index}`}
                   width={1920}
                   height={1080}
-                  className="w-full h-auto max-h-[600px] object-contain rounded-lg shadow-md"
+                  className="w-full h-auto max-h-[600px] object-contain shadow-md"
                 />
               </div>
             ))}
