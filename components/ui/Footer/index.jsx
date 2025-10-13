@@ -51,7 +51,12 @@ const Footer = () => (
             </div>
             <div className="flex flex-col sm:flex-row justify-between w-full gap-4 font-bold sm:gap-0">
                 <p>Jl. Danau Rawa Pening II H5G11</p>
-                <p>https://www.instagram.com/jeloart9/</p>
+                <Link 
+                    href="https://www.instagram.com/jeloart9/" 
+                    className="hover:underline break-words"
+                    >
+                    https://www.instagram.com/jeloart9/
+                </Link>
             </div>
         </div>
 
