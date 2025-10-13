@@ -51,7 +51,7 @@ const Footer = () => (
             </div>
             <div className="flex flex-col sm:flex-row justify-between w-full gap-4 font-bold sm:gap-0">
                 <p>Jl. Danau Rawa Pening II H5G11</p>
-                <p>+62 851 8326 2669</p>
+                <p>https://www.instagram.com/jeloart9/</p>
             </div>
         </div>
 
