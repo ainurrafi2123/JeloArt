@@ -15,7 +15,7 @@ const ShuffleHero = () => {
           </p>
           <div className="mt-2 px-10 h-4 border-t-4 border-image-gradient rounded-full mx-auto"></div>
           <p className="text-base md:text-lg text-slate-300 my-2 md:my-4 text-center">
-            Aset ilustrasi kami telah digunakan oleh lebih dari 10.000 pengguna Canva di berbagai belahan dunia. 
+            Aset ilustrasi kami telah digunakan oleh lebih dari jutaan pengguna Canva di berbagai belahan dunia. 
           </p>
           <a
             href="https://www.canva.com/p/saiside/?utm_medium=referral&utm_source=creator_share&utm_campaign=creator_share"
