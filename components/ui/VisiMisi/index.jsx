@@ -10,7 +10,9 @@ const VisiMisi = () => {
                 <div className="text-center md:text-left">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold pb-6">Visi Kami</h1>
                     <p className="text-base sm:text-lg">
-                       d
+                      Menjadi mitra utama pengguna global dalam <br/>
+                        menciptakan karya visual yang efektif dan <br/>
+                        menginspirasi melalui platform Canva.
                     </p>
                 </div>
                 <div className="flex justify-center">
