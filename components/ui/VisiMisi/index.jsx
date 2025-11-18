@@ -10,7 +10,10 @@ const VisiMisi = () => {
                 <div className="text-center md:text-left">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold pb-6">Visi Kami</h1>
                     <p className="text-base sm:text-lg">
-                      c
+                      Menjadi mitra utama pengguna global dalam menciptakan
+                        karya visual yang efektif dan menginspirasi melalui
+                        pemanfaatan platform digital, sekaligus mendorong
+                        pertumbuhan ekosistem ekonomi kreatif lokal
                     </p>
                 </div>
                 <div className="flex justify-center">
