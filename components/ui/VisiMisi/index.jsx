@@ -34,8 +34,7 @@ const VisiMisi = () => {
                     <div>
                         <h1 className="text-lg sm:text-xl font-semibold pb-3">Inspiratif</h1>
                         <p className="text-sm sm:text-base">
-                        Secara konsisten menyajikan konten visual<br />
-                        iyang inspiratif di berbagai platform digital.
+                        Secara konsisten menyajikan konten visual yang inspiratif di berbagai platform digital.
                         </p>
                     </div>
                     <hr className="border-image-gradient border-t-4 " />
