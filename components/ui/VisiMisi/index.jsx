@@ -11,7 +11,7 @@ const VisiMisi = () => {
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold pb-6">Visi Kami</h1>
                     <p className="text-base sm:text-lg">
                       Menjadi mitra utama pengguna global <br/> dalam menciptakan
-                        karya  <br/> visual yang efektif dan menginspirasi melalui 
+                        karya  <br/> visual yang efektif dan menginspirasi <br/> melalui 
                         pemanfaatan platform digital, sekaligus mendorong
                         pertumbuhan ekosistem ekonomi kreatif lokal 
                     </p>
