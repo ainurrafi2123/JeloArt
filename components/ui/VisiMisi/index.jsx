@@ -13,7 +13,7 @@ const VisiMisi = () => {
                       Menjadi mitra utama pengguna global dalam menciptakan
                         karya visual yang efektif dan menginspirasi melalui
                         pemanfaatan platform digital, sekaligus mendorong
-                        pertumbuhan ekosistem ekonomi kreatif lokal
+                        pertumbuhan ekosistem ekonomi kreatif lokal 
                     </p>
                 </div>
                 <div className="flex justify-center">
