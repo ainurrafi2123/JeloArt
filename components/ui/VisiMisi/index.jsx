@@ -32,36 +32,31 @@ const VisiMisi = () => {
 
                 <div className="bg-black w-full md:w-[500px] flex flex-col gap-6 p-6 sm:p-10 text-white">
                     <div>
-                        <h1 className="text-lg sm:text-xl font-semibold pb-3">Kualitas Template</h1>
+                        <h1 className="text-lg sm:text-xl font-semibold pb-3">Inspiratif</h1>
                         <p className="text-sm sm:text-base">
-                        Menghasilkan template berkualitas tinggi yang<br />
-                        inovatif dan relevan. Kami berkomitmen untuk terus<br />
-                        memperbarui dan menyempurnakan koleksi<br />
-                        template kami agar selalu selaras dengan tren<br />
-                        desain terkini dan kebutuhan pasar.
+                        Secara konsisten menyajikan konten visual<br />
+                        iyang inspiratif di berbagai platform digital.
                         </p>
                     </div>
                     <hr className="border-image-gradient border-t-4 " />
 
                     <div>
-                        <h1 className="text-lg sm:text-xl font-semibold pb-3">Mudah Digunakan</h1>
+                        <h1 className="text-lg sm:text-xl font-semibold pb-3">Jangkauan Luas</h1>
                         <p className="text-sm sm:text-base">
-                        Menyediakan pengalaman desain yang mudah diakses<br />
-                        bagi pengguna Canva. Kami yakin bahwa setiap individu,
-                        tanpa memandang tingkat keterampilan desainnya,
-                        seharusnya bisa menghasilkan karya yang mengesankan
-                        dan profesional.
+                        Memperluas jangkauan global agar karya visual <br />
+                        lokal dapat dinikmati dan dimanfaatkan secara
+                        lebih luas oleh komunitas internasional.
                         </p>
                     </div>
                     <hr className="border-image-gradient border-t-4 " />
 
                     <div>
-                        <h1 className="text-lg sm:text-xl font-semibold pb-3">Fungsional</h1>
+                        <h1 className="text-lg sm:text-xl font-semibold pb-3">Ekonomi Kreatif</h1>
                         <p className="text-sm sm:text-base">
-                        Kami mendukung pengguna untuk memenuhi<br />
-                        kebutuhan visual dengan desain fungsional dan<br />
-                        menarik, memastikan setiap elemen dan desain<br />
-                        efektif untuk konteks pribadi, bisnis, dan pendidikan.
+                        Mengubah ide-ide visual menjadi<br />
+                        kebutuhan visual dengan desain fungsional dan <br />
+                        nilai ekonomi nyata, mendukung ekosistem kreatif <br />
+                        dari bidang hiburan hingga kebutuhan komunikasi visual praktis.
                         </p>
                     </div>
                 </div>
