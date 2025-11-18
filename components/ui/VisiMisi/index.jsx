@@ -42,9 +42,7 @@ const VisiMisi = () => {
                     <div>
                         <h1 className="text-lg sm:text-xl font-semibold pb-3">Jangkauan Luas</h1>
                         <p className="text-sm sm:text-base">
-                        Memperluas jangkauan global agar karya visual <br />
-                        lokal dapat dinikmati dan dimanfaatkan secara
-                        lebih luas oleh komunitas internasional.
+                        Memperluas jangkauan global agar karya visual lokal dapat dinikmati dan dimanfaatkan secara lebih luas oleh komunitas internasional.
                         </p>
                     </div>
                     <hr className="border-image-gradient border-t-4 " />
@@ -52,10 +50,7 @@ const VisiMisi = () => {
                     <div>
                         <h1 className="text-lg sm:text-xl font-semibold pb-3">Ekonomi Kreatif</h1>
                         <p className="text-sm sm:text-base">
-                        Mengubah ide-ide visual menjadi<br />
-                        kebutuhan visual dengan desain fungsional dan <br />
-                        nilai ekonomi nyata, mendukung ekosistem kreatif <br />
-                        dari bidang hiburan hingga kebutuhan komunikasi visual praktis.
+                        Mengubah ide-ide visual menjadi kebutuhan visual dengan desain fungsional dan nilai ekonomi nyata, mendukung ekosistem kreatif dari bidang hiburan hingga kebutuhan komunikasi visual praktis.
                         </p>
                     </div>
                 </div>
